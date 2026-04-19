@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOEIC Vocab Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>TOEIC Vocabulary Flashcards</h1>
+      <p class="subtitle">Learn key words with sample sentences and email yourself what you learned today.</p>
+
+      <section class="setup card">
+        <label for="email">Your email</label>
+        <input id="email" type="email" placeholder="you@example.com" />
+        <button id="startBtn">Start learning</button>
+      </section>
+
+      <section id="flashcardSection" class="hidden">
+        <article id="flashcard" class="flashcard card">
+          <div class="front">
+            <p class="label">Word</p>
+            <h2 id="word"></h2>
+            <button id="revealBtn">Reveal meaning & examples</button>
+          </div>
+          <div class="back hidden" id="backSide">
+            <p class="label">Meaning</p>
+            <p id="meaning"></p>
+            <p class="label">Examples</p>
+            <ul id="examples"></ul>
+          </div>
+        </article>
+
+        <div class="actions">
+          <button id="learnedBtn">I learned this</button>
+          <button id="skipBtn" class="secondary">Skip</button>
+        </div>
+
+        <p id="progress"></p>
+      </section>
+
+      <section id="doneSection" class="hidden card">
+        <h2>Great job 🎉</h2>
+        <p>You finished all flashcards for today.</p>
+        <button id="sendMailBtn">Send today's learned words to my email</button>
+        <p id="mailStatus"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
